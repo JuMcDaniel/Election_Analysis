@@ -31,7 +31,7 @@ winning_percentage = 0
 
 largest_county= ""
 county_count= 0
-county_percentage = 0
+county_winning_percentage = 0
 
 
 # Read the csv and convert it into a list of dictionaries
@@ -116,9 +116,9 @@ with open(file_to_save, "w") as txt_file:
    
         
 
-        if(votes>county_count) and (county_percentage > winning_percentage):
+        if(votes>county_count) and (county_percentage > county_winning_percentage):
             county_count=votes
-            winning_percentage=county_percentage
+            county_winning_percentage=county_percentage
             winning_county=county
             
 
